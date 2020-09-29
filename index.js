@@ -1,7 +1,7 @@
 /* This bot is designed by 87Ferrets
  * --> Developed by TuxThePenguin#5615 who is a developer for 87Ferrets
- * Current Version: 1.5.0
- * Last Updated: 05/08/2020
+ * Current Version: 2.0.0
+ * Last Updated: 29/09/2020
  * (c) Copyright 2020 87FerretsDev
  */
 
@@ -75,11 +75,7 @@ if (message.author.displayname == "TuxThePenguin") {
     const word2 = words_random();
     message.author.setNickname(word1 + ' ' + word2);
     message.channel.send('<@' + message.author.id + '>');
-    const warning = new Discord.MessageEmbed()
-      .setColor('#FF0000')
-      .setTitle('Impersonation!')
-      .setDescription(`Hello, **${message.author.displayname}**. You have tried to impersonate TuxThePenguin so you have been given a different name. Be warned, continuous impersonation may result in a ban!`)
-    message.channel.send(warning);
+    message.channel.send(`Hello, **${message.author.displayname}**. You have tried to impersonate TuxThePenguin so you have been given a different name. Be warned, continuous impersonation may result in a ban!`);
   }
 }
 
@@ -91,11 +87,7 @@ if (message.author.displayname == "!-a-ferret-!") {
     const word2 = words_random();
     message.author.setNickname(word1 + ' ' + word2);
     message.channel.send('<@' + message.author.id + '>');
-    const warning = new Discord.MessageEmbed()
-      .setColor('#FF0000')
-      .setTitle('Impersonation!')
-      .setDescription(`Hello, **${message.author.displayname}**. You have tried to impersonate !-a-ferret-! so you have been given a different name. Be warned, continuous impersonation may result in a ban!`)
-    message.channel.send(warning);
+    message.channel.send(`Hello, **${message.author.displayname}**. You have tried to impersonate !-a-ferret-! so you have been given a different name. Be warned, continuous impersonation may result in a ban!`);
   }
 }
   // --- PROFANE WORD DETECTION ---
@@ -113,32 +105,17 @@ for (let i = 0; i < pgservers.length; i++) {
           const word = message_split[i];
           if (word.toLowerCase() == elem) {
             message.delete();
-            const warning = new Discord.MessageEmbed()
-              .setColor('#FF0000')
-              .setTitle('Profanity Detected!')
-              .setDescription(`Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`)
-              .setFooter('I am still learning! If you feel wrongly judged, please PM one of the server admins and inform them of what you typed.')
-            message.channel.send(warning);
+            message.channel.send('**Profanity Detected!**' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
             return;
           }
           if (word.toLowerCase().startsWith(elem)) {
             message.delete();
-            const warning = new Discord.MessageEmbed()
-              .setColor('#FF0000')
-              .setTitle('Profanity Detected!')
-              .setDescription(`Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`)
-              .setFooter('I am still learning! If you feel wrongly judged, please PM one of the server admins and inform them of what you typed.')
-            message.channel.send(warning);
+            message.channel.send('**Profanity Detected!**' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
             return;
           }
           if (word.toLowerCase().endsWith(elem)) {
             message.delete();
-            const warning = new Discord.MessageEmbed()
-              .setColor('#FF0000')
-              .setTitle('Profanity Detected!')
-              .setDescription(`Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`)
-              .setFooter('I am still learning! If you feel wrongly judged, please PM one of the server admins and inform them of what you typed.')
-            message.channel.send(warning);
+            message.channel.send('**Profanity Detected!**' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
             return;
           }
         }
