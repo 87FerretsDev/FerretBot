@@ -13,7 +13,8 @@
 		"express": "^4.17.1",
 		"express.js": "^1.0.0",
 		"random-words": "^1.1.1",
-		"spamnya": "^1.1.1"
+		"spamnya": "^1.1.1",
+		"node-fetch": ">=2.6.1"
 	},
 	"repository": {
 		"type": "git",
