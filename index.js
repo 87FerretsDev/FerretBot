@@ -105,17 +105,17 @@ for (let i = 0; i < pgservers.length; i++) {
           const word = message_split[i];
           if (word.toLowerCase() == elem) {
             message.delete();
-            message.channel.send('**Profanity Detected!**' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
+            message.channel.send('**Profanity Detected!** ' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
             return;
           }
           if (word.toLowerCase().startsWith(elem)) {
             message.delete();
-            message.channel.send('**Profanity Detected!**' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
+            message.channel.send('**Profanity Detected!** ' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
             return;
           }
           if (word.toLowerCase().endsWith(elem)) {
             message.delete();
-            message.channel.send('**Profanity Detected!**' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
+            message.channel.send('**Profanity Detected!** ' + `Woah, **${message.author.username}**! This is a family friendly server, don't use that language or you may get muted!`);
             return;
           }
         }
